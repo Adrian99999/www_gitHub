@@ -1,0 +1,169 @@
+@import "../../common/css/common_style.css";
+@import "../../common/css/normalize.min.css";
+
+#nom
+{
+    color: white;
+    display: inline;
+    text-align: center;
+    background-color: black;
+    mix-blend-mode: multiply;
+    z-index: -2;
+}
+
+header
+{
+    margin: 20px;
+    background: repeating-linear-gradient(90deg, red, yellow, green, red, yellow, green);
+	z-index: -2;
+}
+
+#message
+{
+	color: fuchsia;
+    font-size: 4ex;
+    text-align: center;
+}
+
+#nom, #message
+{
+    font-family: 'Tangerine', cursive;
+}
+
+#info
+{
+    text-indent: 20px;
+    font-family: Arial, Helvetica;
+    color: yellow;
+    margin: 10px;
+}
+
+span.underline
+{
+    text-decoration: underline;
+    color: chartreuse;
+}
+
+#ulMenu
+{
+/*   position: relative;*/
+/*   right: 20%;*/
+	align-self: flex-start;
+/*	margin-left: 5%;*/
+	margin: auto;
+	width: 85%;
+	margin-bottom: 4%;
+}
+
+#ulMenu li:nth-child(6) span:nth-child(1)
+{
+	color: red;
+}
+#ulMenu li:nth-child(7) span:nth-child(1)
+{
+	color: orange;
+}
+#ulMenu li:nth-child(8) span:nth-child(1)
+{
+	color: skyblue;
+}
+
+#divImage
+{
+   text-align: center;
+    width: 55%;
+	 margin-bottom: 20px;
+}
+
+img
+{
+    width: 50%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+    
+    -ms-transform: rotate(5deg); /* IE 9 */
+    -webkit-transform: rotate(5deg); /* Safari */
+    transform: rotate(5deg);
+}
+
+span.retourAccueil
+{
+	position: absolute;
+    display: inline-block;
+	padding: 0px;
+	border: solid red 3px;
+	border-top-right-radius: 20px;
+	margin: 3px;
+}
+
+.retourAccueil >label
+{
+	display:block;
+    padding-left: 5px;
+    color: gold;
+	/*background-color: aqua;*/
+	padding: 5px 10px 0px 15px;
+	cursor:pointer;
+}
+
+div.container
+{
+	position: relative;
+	
+}
+
+#checkboxSourdine
+{
+	cursor:pointer;
+}
+
+li
+{
+	position: relative;
+	
+}
+
+li div
+{
+	background: black;
+	border:solid red 2px;
+	border-radius: 10%;
+	font-size: 70%;
+	min-width: 100px;
+	opacity: 0;
+	padding: 10px;
+	position: absolute;
+	right: 0;
+	top: -10px;
+	transform: scale(0.4);
+	width: 40%;
+	z-index: 2;
+}
+
+li:hover div
+{
+	opacity: 1;
+	transition: 1s;
+	transform: scale(1);
+}
+
+
+
+.divSujets span:nth-child(odd)
+{
+	color: aqua;
+}
+
+.divSujets span:nth-child(even)
+{
+	color: blue;
+}
+
+.divSujets span:nth-child(1)
+{
+	color: red;
+}

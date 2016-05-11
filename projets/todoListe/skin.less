@@ -1,0 +1,314 @@
+.skin (@main-color: red,@background-color: black,@highlight-color:white, @flash-color:lime)
+{
+	@import "../../common/css/common_style.css";
+	@import "../../common/css/normalize.min.css";
+
+	@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+
+//@main-color: red;
+//@background-color: black;
+//@highlight-color:white;
+//@flash-color:lime;
+
+
+//@main-color: blue;
+//@background-color: #ffaa00;
+//@highlight-color:black;
+//@flash-color:red;
+
+a
+{
+	 transition:  2s;
+	&:link
+	{
+		color: spin(@main-color,140);
+	}
+	&:visited
+	{
+	   color: darken(@flash-color, 20%);
+	}
+	&:hover
+	{
+		color: @main-color;
+	}
+	
+}
+
+	span.retourAccueil
+{
+    font-size: 20px;
+    /*background-color: hsl(1,0%,60%);*/
+    background: radial-gradient( hsl(1,0%,100%), hsl(1,0%,40%));
+    opacity: 0.6;  
+    padding: 20px;
+    position: fixed;
+    top: -7px;
+    right: -7px;
+    border-bottom-left-radius: 20px;
+    box-shadow: inset 0 0 10px @highlight-color;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	transition: 2s;
+	&:hover
+	{
+		opacity: 1;
+	}
+	
+	label{
+		color: @main-color;
+	}
+}
+
+	
+	
+body
+{
+	transition: 2s;
+	background-color: @background-color;
+}
+
+#textTodo
+{
+	color: @main-color;
+	font-family: 'Indie Flower', cursive;
+	font-size: 250%;
+	margin-left: 3%;
+}
+
+header
+{
+	display: flex;
+	margin-top: 10px;
+	margin-right: 5px;
+	align-items:center;
+}
+
+.hide-on-small-screen
+{
+	color: @main-color;
+	margin: auto;
+	margin-right: 2%;
+	font-size: 200%;
+	
+	transition: 2s;
+}
+
+#input
+{
+	min-width: 10px;
+	flex: 1;
+	margin: auto;
+	border-radius: 30px;
+	background-color: @main-color;
+	box-shadow: 0 0 10px 8px @main-color; 
+	padding: 10px;
+	border: none;
+	font-weight: bold;
+}
+
+#container
+{
+	border: 5px solid @main-color;
+	border-radius: 30px;
+	max-width: 80%;
+	margin: auto;
+	padding: 1.5%;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+
+#alltask
+{
+	margin-top: 20px;
+}
+
+#todolist, #donelist
+{
+	color: @highlight-color;
+/*	display: flex;*/
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*
+#todolist:empty::after
+{
+	content: "Veuillez entrer une nouvelle tâche à faire svp!";
+	color: greenyellow;
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+	display: block;
+	text-align: center;
+}
+*/
+
+#todolist:empty + #donelist:empty::after
+/*	#todolist:empty::after*/
+{
+	content: "Veuillez entrer une nouvelle tâche à faire svp!";
+	color: @flash-color;
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+	display: block;
+	text-align: center;
+}
+
+article
+{
+/*	display: table-row;*/
+	display: flex;
+	flex:1;
+	align-items: center;
+	margin-top: 1%;
+}
+/*--------------------------------------------*/
+.checkbox
+{
+	transition: 1s;
+}
+
+/*--------------------------------------------------*/
+.text
+{
+	flex: 1;
+	word-break: break-all;
+	line-height: 93%;
+	padding: 5px;
+	margin-left: 1%;
+	margin-right: 1%;
+	transition: 1s;
+	box-sizing: border-box;
+	color: @highlight-color;
+	
+	&:focus
+{
+	background-color: @highlight-color;
+	color: @background-color;
+	border-radius: 10px;
+}
+	&:hover
+{
+	background-color: lighten(@background-color, 42%);
+	border-radius: 4px;
+	border-left: 5px solid @highlight-color;
+	border-right: 5px solid @highlight-color;
+}
+}
+
+
+/*----------------------------------------------------*/
+img
+{
+	width: 16px;
+	height: 16px;
+	transition: 1s;
+}
+
+img:hover, .checkbox:hover, img:focus, .checkbox:focus
+{
+	border-radius: 8px;
+	box-shadow: 0 0 10px 3px @highlight-color;
+	background-color: @highlight-color;
+}
+
+
+#input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(0,0,0,0.5);	
+  font-weight: bold;
+}
+#input::-moz-placeholder { /* Firefox 19+ */
+ color: rgba(0,0,0,0.5);	
+  font-weight: bold;
+}
+#input:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(0,0,0,0.5);	
+  font-weight: bold;
+}
+#input:-moz-placeholder { /* Firefox 18- */
+  color: rgba(0,0,0,0.5);	
+  font-weight: bold;
+}
+
+/*-----------------------------------*/
+.tacheComplete
+{
+	opacity:0.6;
+	text-decoration: line-through;
+	color: @main-color;
+}
+
+/*------------------------------*/
+#buttons
+{
+	display: flex;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	opacity: 0.7;
+	background-color: @highlight-color;
+	
+	transition: 2s;
+	
+	&:hover
+	{
+		opacity: 1;
+	}
+	button
+	{
+		flex:1;
+		color: @main-color;
+		mix-blend-mode: difference;
+
+		transition: 2s;
+		img
+		{
+			vertical-align: middle;
+		}
+	}
+	button:disabled
+	{
+		display: none;
+	}
+	button:hover, button:focus			
+	{
+		 text-shadow: 0px 0px 4px spin(@main-color,140);
+	}
+}
+
+
+span.retourAccueil:hover, span.retourAccueil:focus
+{
+	margin-top:0;
+	margin-right:0;
+	background: radial-gradient( hsl(1,0%,100%), hsl(1,0%,40%)); 
+}
+
+@media (max-width:360px)
+{
+	.hide-on-small-screen
+	{
+		font-size: 0;
+	}
+}
+
+@media (max-height:480px)
+{
+	body
+	{
+		margin-top: -100px;	
+	}
+	span.retourAccueil
+	{
+		margin-top:-15px;
+		margin-right: -140px;
+/*		background: radial-gradient( hsl(1,0%,100%), hsl(120, 100%, 50%));*/
+		background: spin(@main-color,90);
+	}
+}
+
+
+
+}

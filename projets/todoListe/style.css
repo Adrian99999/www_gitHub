@@ -1,0 +1,708 @@
+:root {
+  @import "../../common/css/common_style.css";
+  @import "../../common/css/normalize.min.css";
+  @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+  /*
+#todolist:empty::after
+{
+	content: "Veuillez entrer une nouvelle tâche à faire svp!";
+	color: greenyellow;
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+	display: block;
+	text-align: center;
+}
+*/
+  /*--------------------------------------------*/
+  /*--------------------------------------------------*/
+  /*----------------------------------------------------*/
+  /*-----------------------------------*/
+  /*------------------------------*/
+}
+:root a {
+  transition: 2s;
+}
+:root a:link {
+  color: #00ff55;
+}
+:root a:visited {
+  color: #009900;
+}
+:root a:hover {
+  color: red;
+}
+:root span.retourAccueil {
+  font-size: 20px;
+  /*background-color: hsl(1,0%,60%);*/
+  background: radial-gradient(#ffffff, #666666);
+  opacity: 0.6;
+  padding: 20px;
+  position: fixed;
+  top: -7px;
+  right: -7px;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0 0 10px white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 2s;
+}
+:root span.retourAccueil:hover {
+  opacity: 1;
+}
+:root span.retourAccueil label {
+  color: red;
+}
+:root body {
+  transition: 2s;
+  background-color: black;
+}
+:root #textTodo {
+  color: red;
+  font-family: 'Indie Flower', cursive;
+  font-size: 250%;
+  margin-left: 3%;
+}
+:root header {
+  display: flex;
+  margin-top: 10px;
+  margin-right: 5px;
+  align-items: center;
+}
+:root .hide-on-small-screen {
+  color: red;
+  margin: auto;
+  margin-right: 2%;
+  font-size: 200%;
+  transition: 2s;
+}
+:root #input {
+  min-width: 10px;
+  flex: 1;
+  margin: auto;
+  border-radius: 30px;
+  background-color: red;
+  box-shadow: 0 0 10px 8px red;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+}
+:root #container {
+  border: 5px solid red;
+  border-radius: 30px;
+  max-width: 80%;
+  margin: auto;
+  padding: 1.5%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+:root #alltask {
+  margin-top: 20px;
+}
+:root #todolist,
+:root #donelist {
+  color: white;
+  /*	display: flex;*/
+  margin-left: 10%;
+  margin-right: 10%;
+}
+:root #todolist:empty + #donelist:empty::after {
+  content: "Veuillez entrer une nouvelle tâche à faire svp!";
+  color: lime;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  display: block;
+  text-align: center;
+}
+:root article {
+  /*	display: table-row;*/
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-top: 1%;
+}
+:root .checkbox {
+  transition: 1s;
+}
+:root .text {
+  flex: 1;
+  word-break: break-all;
+  line-height: 93%;
+  padding: 5px;
+  margin-left: 1%;
+  margin-right: 1%;
+  transition: 1s;
+  box-sizing: border-box;
+  color: white;
+}
+:root .text:focus {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+:root .text:hover {
+  background-color: #6b6b6b;
+  border-radius: 4px;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+}
+:root img {
+  width: 16px;
+  height: 16px;
+  transition: 1s;
+}
+:root img:hover,
+:root .checkbox:hover,
+:root img:focus,
+:root .checkbox:focus {
+  border-radius: 8px;
+  box-shadow: 0 0 10px 3px white;
+  background-color: white;
+}
+:root #input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root #input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root #input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root #input:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root .tacheComplete {
+  opacity: 0.6;
+  text-decoration: line-through;
+  color: red;
+}
+:root #buttons {
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  opacity: 0.7;
+  background-color: white;
+  transition: 2s;
+}
+:root #buttons:hover {
+  opacity: 1;
+}
+:root #buttons button {
+  flex: 1;
+  color: red;
+  mix-blend-mode: difference;
+  transition: 2s;
+}
+:root #buttons button img {
+  vertical-align: middle;
+}
+:root #buttons button:disabled {
+  display: none;
+}
+:root #buttons button:hover,
+:root #buttons button:focus {
+  text-shadow: 0px 0px 4px #00ff55;
+}
+:root span.retourAccueil:hover,
+:root span.retourAccueil:focus {
+  margin-top: 0;
+  margin-right: 0;
+  background: radial-gradient(#ffffff, #666666);
+}
+@media (max-width: 360px) {
+  :root .hide-on-small-screen {
+    font-size: 0;
+  }
+}
+@media (max-height: 480px) {
+  :root body {
+    margin-top: -100px;
+  }
+  :root span.retourAccueil {
+    margin-top: -15px;
+    margin-right: -140px;
+    /*		background: radial-gradient( hsl(1,0%,100%), hsl(120, 100%, 50%));*/
+    background: #80ff00;
+  }
+}
+:root.blue-on-orange {
+  @import "../../common/css/common_style.css";
+  @import "../../common/css/normalize.min.css";
+  @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+  /*
+#todolist:empty::after
+{
+	content: "Veuillez entrer une nouvelle tâche à faire svp!";
+	color: greenyellow;
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+	display: block;
+	text-align: center;
+}
+*/
+  /*--------------------------------------------*/
+  /*--------------------------------------------------*/
+  /*----------------------------------------------------*/
+  /*-----------------------------------*/
+  /*------------------------------*/
+}
+:root.blue-on-orange a {
+  transition: 2s;
+}
+:root.blue-on-orange a:link {
+  color: #ff5500;
+}
+:root.blue-on-orange a:visited {
+  color: #990000;
+}
+:root.blue-on-orange a:hover {
+  color: blue;
+}
+:root.blue-on-orange span.retourAccueil {
+  font-size: 20px;
+  /*background-color: hsl(1,0%,60%);*/
+  background: radial-gradient(#ffffff, #666666);
+  opacity: 0.6;
+  padding: 20px;
+  position: fixed;
+  top: -7px;
+  right: -7px;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0 0 10px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 2s;
+}
+:root.blue-on-orange span.retourAccueil:hover {
+  opacity: 1;
+}
+:root.blue-on-orange span.retourAccueil label {
+  color: blue;
+}
+:root.blue-on-orange body {
+  transition: 2s;
+  background-color: #ffaa00;
+}
+:root.blue-on-orange #textTodo {
+  color: blue;
+  font-family: 'Indie Flower', cursive;
+  font-size: 250%;
+  margin-left: 3%;
+}
+:root.blue-on-orange header {
+  display: flex;
+  margin-top: 10px;
+  margin-right: 5px;
+  align-items: center;
+}
+:root.blue-on-orange .hide-on-small-screen {
+  color: blue;
+  margin: auto;
+  margin-right: 2%;
+  font-size: 200%;
+  transition: 2s;
+}
+:root.blue-on-orange #input {
+  min-width: 10px;
+  flex: 1;
+  margin: auto;
+  border-radius: 30px;
+  background-color: blue;
+  box-shadow: 0 0 10px 8px blue;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+}
+:root.blue-on-orange #container {
+  border: 5px solid blue;
+  border-radius: 30px;
+  max-width: 80%;
+  margin: auto;
+  padding: 1.5%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+:root.blue-on-orange #alltask {
+  margin-top: 20px;
+}
+:root.blue-on-orange #todolist,
+:root.blue-on-orange #donelist {
+  color: black;
+  /*	display: flex;*/
+  margin-left: 10%;
+  margin-right: 10%;
+}
+:root.blue-on-orange #todolist:empty + #donelist:empty::after {
+  content: "Veuillez entrer une nouvelle tâche à faire svp!";
+  color: red;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  display: block;
+  text-align: center;
+}
+:root.blue-on-orange article {
+  /*	display: table-row;*/
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-top: 1%;
+}
+:root.blue-on-orange .checkbox {
+  transition: 1s;
+}
+:root.blue-on-orange .text {
+  flex: 1;
+  word-break: break-all;
+  line-height: 93%;
+  padding: 5px;
+  margin-left: 1%;
+  margin-right: 1%;
+  transition: 1s;
+  box-sizing: border-box;
+  color: black;
+}
+:root.blue-on-orange .text:focus {
+  background-color: black;
+  color: #ffaa00;
+  border-radius: 10px;
+}
+:root.blue-on-orange .text:hover {
+  background-color: #fff1d6;
+  border-radius: 4px;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
+:root.blue-on-orange img {
+  width: 16px;
+  height: 16px;
+  transition: 1s;
+}
+:root.blue-on-orange img:hover,
+:root.blue-on-orange .checkbox:hover,
+:root.blue-on-orange img:focus,
+:root.blue-on-orange .checkbox:focus {
+  border-radius: 8px;
+  box-shadow: 0 0 10px 3px black;
+  background-color: black;
+}
+:root.blue-on-orange #input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root.blue-on-orange #input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root.blue-on-orange #input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root.blue-on-orange #input:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root.blue-on-orange .tacheComplete {
+  opacity: 0.6;
+  text-decoration: line-through;
+  color: blue;
+}
+:root.blue-on-orange #buttons {
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  opacity: 0.7;
+  background-color: black;
+  transition: 2s;
+}
+:root.blue-on-orange #buttons:hover {
+  opacity: 1;
+}
+:root.blue-on-orange #buttons button {
+  flex: 1;
+  color: blue;
+  mix-blend-mode: difference;
+  transition: 2s;
+}
+:root.blue-on-orange #buttons button img {
+  vertical-align: middle;
+}
+:root.blue-on-orange #buttons button:disabled {
+  display: none;
+}
+:root.blue-on-orange #buttons button:hover,
+:root.blue-on-orange #buttons button:focus {
+  text-shadow: 0px 0px 4px #ff5500;
+}
+:root.blue-on-orange span.retourAccueil:hover,
+:root.blue-on-orange span.retourAccueil:focus {
+  margin-top: 0;
+  margin-right: 0;
+  background: radial-gradient(#ffffff, #666666);
+}
+@media (max-width: 360px) {
+  :root.blue-on-orange .hide-on-small-screen {
+    font-size: 0;
+  }
+}
+@media (max-height: 480px) {
+  :root.blue-on-orange body {
+    margin-top: -100px;
+  }
+  :root.blue-on-orange span.retourAccueil {
+    margin-top: -15px;
+    margin-right: -140px;
+    /*		background: radial-gradient( hsl(1,0%,100%), hsl(120, 100%, 50%));*/
+    background: #ff0080;
+  }
+}
+:root.my_skin {
+  @import "../../common/css/common_style.css";
+  @import "../../common/css/normalize.min.css";
+  @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+  /*
+#todolist:empty::after
+{
+	content: "Veuillez entrer une nouvelle tâche à faire svp!";
+	color: greenyellow;
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+	display: block;
+	text-align: center;
+}
+*/
+  /*--------------------------------------------*/
+  /*--------------------------------------------------*/
+  /*----------------------------------------------------*/
+  /*-----------------------------------*/
+  /*------------------------------*/
+}
+:root.my_skin a {
+  transition: 2s;
+}
+:root.my_skin a:link {
+  color: #00aaff;
+}
+:root.my_skin a:visited {
+  color: #001a00;
+}
+:root.my_skin a:hover {
+  color: #FFFF00;
+}
+:root.my_skin span.retourAccueil {
+  font-size: 20px;
+  /*background-color: hsl(1,0%,60%);*/
+  background: radial-gradient(#ffffff, #666666);
+  opacity: 0.6;
+  padding: 20px;
+  position: fixed;
+  top: -7px;
+  right: -7px;
+  border-bottom-left-radius: 20px;
+  box-shadow: inset 0 0 10px #33CC33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 2s;
+}
+:root.my_skin span.retourAccueil:hover {
+  opacity: 1;
+}
+:root.my_skin span.retourAccueil label {
+  color: #FFFF00;
+}
+:root.my_skin body {
+  transition: 2s;
+  background-color: #400000;
+}
+:root.my_skin #textTodo {
+  color: #FFFF00;
+  font-family: 'Indie Flower', cursive;
+  font-size: 250%;
+  margin-left: 3%;
+}
+:root.my_skin header {
+  display: flex;
+  margin-top: 10px;
+  margin-right: 5px;
+  align-items: center;
+}
+:root.my_skin .hide-on-small-screen {
+  color: #FFFF00;
+  margin: auto;
+  margin-right: 2%;
+  font-size: 200%;
+  transition: 2s;
+}
+:root.my_skin #input {
+  min-width: 10px;
+  flex: 1;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #FFFF00;
+  box-shadow: 0 0 10px 8px #FFFF00;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+}
+:root.my_skin #container {
+  border: 5px solid #FFFF00;
+  border-radius: 30px;
+  max-width: 80%;
+  margin: auto;
+  padding: 1.5%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+:root.my_skin #alltask {
+  margin-top: 20px;
+}
+:root.my_skin #todolist,
+:root.my_skin #donelist {
+  color: #33CC33;
+  /*	display: flex;*/
+  margin-left: 10%;
+  margin-right: 10%;
+}
+:root.my_skin #todolist:empty + #donelist:empty::after {
+  content: "Veuillez entrer une nouvelle tâche à faire svp!";
+  color: green;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  display: block;
+  text-align: center;
+}
+:root.my_skin article {
+  /*	display: table-row;*/
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-top: 1%;
+}
+:root.my_skin .checkbox {
+  transition: 1s;
+}
+:root.my_skin .text {
+  flex: 1;
+  word-break: break-all;
+  line-height: 93%;
+  padding: 5px;
+  margin-left: 1%;
+  margin-right: 1%;
+  transition: 1s;
+  box-sizing: border-box;
+  color: #33CC33;
+}
+:root.my_skin .text:focus {
+  background-color: #33CC33;
+  color: #400000;
+  border-radius: 10px;
+}
+:root.my_skin .text:hover {
+  background-color: #ff1717;
+  border-radius: 4px;
+  border-left: 5px solid #33CC33;
+  border-right: 5px solid #33CC33;
+}
+:root.my_skin img {
+  width: 16px;
+  height: 16px;
+  transition: 1s;
+}
+:root.my_skin img:hover,
+:root.my_skin .checkbox:hover,
+:root.my_skin img:focus,
+:root.my_skin .checkbox:focus {
+  border-radius: 8px;
+  box-shadow: 0 0 10px 3px #33CC33;
+  background-color: #33CC33;
+}
+:root.my_skin #input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root.my_skin #input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root.my_skin #input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root.my_skin #input:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+:root.my_skin .tacheComplete {
+  opacity: 0.6;
+  text-decoration: line-through;
+  color: #FFFF00;
+}
+:root.my_skin #buttons {
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  opacity: 0.7;
+  background-color: #33CC33;
+  transition: 2s;
+}
+:root.my_skin #buttons:hover {
+  opacity: 1;
+}
+:root.my_skin #buttons button {
+  flex: 1;
+  color: #FFFF00;
+  mix-blend-mode: difference;
+  transition: 2s;
+}
+:root.my_skin #buttons button img {
+  vertical-align: middle;
+}
+:root.my_skin #buttons button:disabled {
+  display: none;
+}
+:root.my_skin #buttons button:hover,
+:root.my_skin #buttons button:focus {
+  text-shadow: 0px 0px 4px #00aaff;
+}
+:root.my_skin span.retourAccueil:hover,
+:root.my_skin span.retourAccueil:focus {
+  margin-top: 0;
+  margin-right: 0;
+  background: radial-gradient(#ffffff, #666666);
+}
+@media (max-width: 360px) {
+  :root.my_skin .hide-on-small-screen {
+    font-size: 0;
+  }
+}
+@media (max-height: 480px) {
+  :root.my_skin body {
+    margin-top: -100px;
+  }
+  :root.my_skin span.retourAccueil {
+    margin-top: -15px;
+    margin-right: -140px;
+    /*		background: radial-gradient( hsl(1,0%,100%), hsl(120, 100%, 50%));*/
+    background: #00ff80;
+  }
+}

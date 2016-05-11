@@ -1,0 +1,31 @@
+@import "../../common/css/common_style.css";
+@import "../../common/css/normalize.min.css";
+
+div.classYellow
+{
+    margin: 2%;
+    color: yellow;
+}
+
+div.pens
+{
+    background-color: coral;
+    padding: 1%;
+    margin: 1%;
+    /*min-height: 600px;*/
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.penDiv
+{
+    width: 48%;
+    min-width: 450px;
+    //min-height: 450px;
+    padding: 1%;
+}
+
+
+

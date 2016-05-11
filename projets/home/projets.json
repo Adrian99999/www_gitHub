@@ -1,0 +1,53 @@
+{  
+   "projets":[  
+      {  
+         "nom":"Langues",
+         "dir":"langues",
+         "description":"Pratique de l'utilisation des sélecteurs et de la mise en page avec CSS3",
+         "sujets":[  
+            "CSS",
+            "HTML5",
+            "Sélecteurs"
+         ]
+      },
+      {  
+         "nom":"Pens",
+         "dir":"pens",
+         "description":"Exercices que j'ai faits sur CodePen"
+      },
+      {  
+         "nom":"Youtube",
+         "dir":"youtube"
+      },
+      {  
+         "nom":"Tutoriel",
+         "dir":"tutorielJS"
+      },
+      {  
+         "nom":"Todo liste",
+         "dir":"todoListe",
+         "description":"Une liste de choses à faire"
+      },
+      {  
+         "nom":"Todo",
+         "dir":"todoListe",
+         "description":"Le skin par défaut",
+         "skin":" ",
+         "spanSkin":"classique"
+      },
+      {  
+         "nom":"Todo",
+         "dir":"todoListe",
+         "description":"Le skin blue on orange",
+         "skin":"blue-on-orange",
+         "spanSkin":"orange"
+      },
+      {  
+         "nom":"Todo",
+         "dir":"todoListe",
+         "description":"Le skin personalisé",
+         "skin":"my_skin",
+         "spanSkin":"my skin"
+      }
+   ]
+}

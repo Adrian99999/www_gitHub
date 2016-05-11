@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html class="" lang="fr">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">	
+		<title>TP1 Adrian Pinzaru</title>
+		<script src="../../common/js/favicons.js"></script>
+		
+	
+		
+		<link rel="stylesheet" type="text/css" href="styles.fixed.css">
+		
+<!--
+		<link rel="stylesheet/less" type="text/css" href="style.less" />
+		<script src="less.min.js" type="text/javascript"></script>
+-->
+		
+	</head>
+	<body>
+		<span class="retourAccueil" tabindex=0>
+			<a href="../../projets/home/index.html">Retour à l'accueil</a>
+			<label for="combobox">Skin: 
+			<select id="combobox" name="skin">
+				<option value="" selected>Red on Black</option>
+				<option value="blue-on-orange">Blue on Orange</option>
+				<option value="my_skin">My Skin</option>
+			</select>
+			</label>
+		</span>
+		
+		<p id="textTodo">Todo</p>
+		
+		<div id="container">
+			<header>
+				<span class="hide-on-small-screen">Todo</span>
+				<input type="text" id="input" placeholder="Entrez ici..." tabindex="0">			
+			</header>
+		
+			<div id="alltask">
+				<div id="todolist"></div>
+				<div id="donelist"></div>
+			</div>
+		
+		</div>
+		
+		<div id="buttons" tabindex="0">
+			<button><img src="../../images/Checkbox.png" alt="Image"> Marquer toutes les tâches comme complétées</button>
+			<button><img src="../../images/Actions-window-close-icon.png" alt="Image"> Effacer les tâches complétées</button>
+		</div>
+			
+		<template>
+			<article>
+				<input type="checkbox" class="checkbox">
+				<div class="text" tabindex="0" contenteditable="true"> </div>
+				<img src="../../images/Actions-window-close-icon.png" alt="delete" tabindex="0">
+			</article>
+		</template>
+		
+		<script src="main.js"></script>
+	</body>
+</html>
