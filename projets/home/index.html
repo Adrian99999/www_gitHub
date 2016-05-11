@@ -41,7 +41,9 @@
 	
 	<script id="template" type="text/x-handlebars-template">
 		{{#each projets}}
-			<li><a href="../{{dir}}/index.html{{#if skin}}?skin={{skin}} {{/if}}">{{nom}} {{#if spanSkin}} <span>({{spanSkin}})</span>  {{/if}} </a>
+			<li><a href=" {{#if dir}}../{{dir}}/index.html{{/if}}
+						  {{#if dirUrl}} {{dirUrl}} {{/if}}
+						  {{#if skin}}?skin={{skin}} {{/if}}">{{nom}}  {{#if spanSkin}} <span>({{spanSkin}})</span>  {{/if}} </a>
 			{{#if description}}
 				<div> {{description}}
 				{{#if sujets}}
